@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+python company_matching_service_stack.py | tee company_matching_service_stack.json  ; aws cloudformation create-stack --stack-name "company-matching-svc"  --template-body file://company_matching_service_stack.json
